@@ -40,11 +40,16 @@ class CorbusierKitTests: XCTestCase {
             crbname("area5") : area5,
         ]
         
-        try corbusier.run(line: "place area1.left.top < 100 > canvas.left")
-        try corbusier.run(line: "place area2.bottom.left < 50 > area1.top.left")
-        try corbusier.run(line: "place area3.left < 50 > area2.right")
-        try corbusier.run(line: "place area4.top.right < 50 > area3.bottom.right")
-        try corbusier.run(line: "place area5.top.left < 50 > area3.bottom.left")
+        let code = """
+place area1.left.top < 100 > canvas.left
+place area2.bottom.left < 50 > area1.top.left
+place area3.left < 50 > area2.right
+place area4.top.right < 50 > area3.bottom.right
+place area5.top.left < 50 > area3.bottom.left
+"""
+        print(code)
+        let program = Corbusier(multiline: code, context: corbusier)
+        try program.run()
         
         for rect in objcts.flatMap({ try? $0.placed() as! Rect }) {
             context.fill(rect.rect)
@@ -66,10 +71,3 @@ class CorbusierKitTests: XCTestCase {
     ]
 }
 
-extension CRBContext {
-    
-    mutating func run(line: String) throws {
-        try corbusierRun(line: line, in: &self)
-    }
-    
-}
