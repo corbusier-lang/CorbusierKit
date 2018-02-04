@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CorbusierLang",
+        "repositoryURL": "https://github.com/corbusier-lang/CorbusierLang.git",
+        "state": {
+          "branch": "master",
+          "revision": "c7330e2ab931509fdb88c3cb07e0f28240aeec12",
+          "version": null
+        }
+      },
+      {
+        "package": "CoreCorbusier",
+        "repositoryURL": "https://github.com/corbusier-lang/CoreCorbusier.git",
+        "state": {
+          "branch": "master",
+          "revision": "3e54a316e90202334065c5041159f85e9bf03e38",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
