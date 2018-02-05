@@ -10,7 +10,7 @@ import CoreCorbusier
 
 public final class CGCRBContext : CRBObject {
     
-    let context: CGContext
+    public let context: CGContext
     
     init(context: CGContext) {
         self.context = context

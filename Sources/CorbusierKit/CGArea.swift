@@ -78,9 +78,9 @@ class CGArea : CRBObject {
         case "bottom.left", "left.bottom":
             cgrect = CGRect(origin: CGPoint.init(x: point.x, y: point.y), size: size)
         case "bottom.center", "bottom":
-            cgrect = CGRect(origin: CGPoint.init(x: point.x + size.width / 2, y: point.y), size: size)
+            cgrect = CGRect(origin: CGPoint.init(x: point.x - size.width / 2, y: point.y), size: size)
         case "bottom.right", "right.bottom":
-            cgrect = CGRect(origin: CGPoint.init(x: point.x + size.width, y: point.y), size: size)
+            cgrect = CGRect(origin: CGPoint.init(x: point.x - size.width, y: point.y), size: size)
         case "left":
             cgrect = CGRect(origin: CGPoint.init(x: point.x, y: point.y - size.height / 2), size: size)
         case "right":
