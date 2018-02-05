@@ -54,6 +54,8 @@ class CGArea : CRBObject {
     var state: CRBObjectState
     fileprivate let size: CGSize
     
+    private var recorders: [(CGRect) -> ()] = []
+    
     init(size: CGSize) {
         self.size = size
         self.state = .unplaced
@@ -63,6 +65,10 @@ class CGArea : CRBObject {
         self.size = rect.size
         let rect = Rect(rect: rect)
         self.state = .placed(rect)
+    }
+    
+    func record(to recorder: @escaping (CGRect) -> ()) {
+        recorders.append(recorder)
     }
     
     func place(at point: CRBPoint, fromAnchorWith keyPath: CRBAnchorKeyPath) {
@@ -89,6 +95,7 @@ class CGArea : CRBObject {
             cgrect = .zero
         }
         self.state = .placed(Rect(rect: cgrect))
+        self.recorders.forEach({ $0(cgrect) })
     }
     
     func isAnchorSupported(anchorName: CRBAnchorKeyPath) -> Bool {

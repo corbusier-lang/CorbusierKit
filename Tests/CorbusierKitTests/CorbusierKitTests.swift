@@ -6,10 +6,10 @@ import CoreCorbusier
 
 class CorbusierKitTests: XCTestCase {
     
-    func makeContext() -> CGCRBContext {
+    func makeContext(width: Int, height: Int) -> CGCRBContext {
         let context = CGContext.init(data: nil,
-                                     width: 1000,
-                                     height: 500,
+                                     width: width,
+                                     height: height,
                                      bitsPerComponent: 8,
                                      bytesPerRow: 0,
                                      space: CGColorSpace.init(name: CGColorSpace.sRGB)!,
@@ -35,7 +35,7 @@ class CorbusierKitTests: XCTestCase {
     }
     
     func testExample() throws {
-        let cgcrbcontext = makeContext()
+        let cgcrbcontext = makeContext(width: 1000, height: 500)
         let context = cgcrbcontext.context
         
         let size = CGSize.init(width: 200, height: 100)
@@ -80,18 +80,31 @@ place area5.top.left < 50 > bottom.left
     }
     
     func testVisual() throws {
-        let cgcrbcontext = makeContext()
+        let cgcrbcontext = makeContext(width: 1000, height: 500)
         let context = cgcrbcontext.context
         let squareSize = CGSize(width: 90, height: 90)
+        
+        var recorded: [CGRect] = []
+        
         var squares: [CGArea] = []
         for _ in 1 ... 9 {
             let sq = CGArea(size: squareSize)
+            sq.record(to: { recorded.append($0) })
             squares.append(sq)
+        }
+        
+        let create = CRBExternalFunctionInstance.init { (instances) -> CRBInstance in
+            let width = instances[0] as! CRBNumberInstance
+            let height = instances[0] as! CRBNumberInstance
+            let area = CGArea(size: CGSize.init(width: width.value, height: height.value))
+            area.record(to: { recorded.append($0) })
+            return area
         }
         
         var corbusier = CRBContext()
         corbusier.instances = [
             crbname("canvas"): cgcrbcontext,
+            crbname("newrect"): create,
             crbname("s1"): squares[0],
             crbname("s2"): squares[1],
             crbname("s3"): squares[2],
@@ -115,15 +128,29 @@ place s8.left.bottom < 50 > s7.right.bottom
 place s9.left < 50 > s8.right
 """
         
+        let alternativeCode = """
+let width = 700
+let height = width
+let distance = 200
+let sq1 = newrect(width, height)
+place sq1.left.top < 200 > canvas.left
+let sq2 = newrect(width, height)
+place sq2.left < distance > sq1.right
+let sq3 = newrect(width, height)
+place sq3.bottom < distance > sq2.top
+let sq4 = newrect(width, height)
+place sq4.right < distance > sq3.left
+"""
+        
         let program = Corbusier(multiline: code, context: corbusier)
         try program.run()
         
         var alpha = 1.0 as CGFloat
-        for rect in squares.flatMap({ try? $0.placed() as! Rect }) {
+        for rect in recorded {
             let original = NSColor.white.withAlphaComponent(alpha).cgColor
             alpha -= 0.07
             context.setFillColor(original)
-            context.fill(rect.rect)
+            context.fill(rect)
         }
         
         saveImage(from: context, imageName: "VISUALCRB")
