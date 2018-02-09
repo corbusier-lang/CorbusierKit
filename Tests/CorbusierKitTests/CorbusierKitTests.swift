@@ -48,7 +48,7 @@ class CorbusierKitTests: XCTestCase {
         let objcts = [area1, area2, area3, area4, area5]
         
         var corbusier = CRBContext()
-        corbusier.instances = [
+        corbusier.currentScope.instances = [
             crbname("canvas") : cgcrbcontext,
             crbname("area1") : area1,
             crbname("area2") : area2,
@@ -102,7 +102,7 @@ place area5.top.left < 50 > bottom.left
         }
         
         var corbusier = CRBContext()
-        corbusier.instances = [
+        corbusier.currentScope.instances = [
             crbname("canvas"): cgcrbcontext,
             crbname("newrect"): create,
             crbname("s1"): squares[0],
@@ -135,11 +135,10 @@ def square(side) {
 }
 def new() {
     if true {
-        let sq = 150
+        return square(150)
     } else {
-        let sq = 50
+        return square(50)
     }
-    return square(sq)
 }
 let distance = 50
 let sq1 = new()
