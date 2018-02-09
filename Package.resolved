@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/corbusier-lang/CorbusierLang.git",
         "state": {
           "branch": "master",
-          "revision": "6b2eaf17799a2bb91d6049ebdb170b920c7e4355",
+          "revision": "0e14ebe785d6016b53a1ca74a9d75b37634b905f",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/corbusier-lang/CoreCorbusier.git",
         "state": {
           "branch": "master",
-          "revision": "c178b94490af3baf79ee1af862a8b24f44a39af5",
+          "revision": "c8971d1a84153843a3db2f64aee31d3dfd3e6c27",
           "version": null
         }
       }

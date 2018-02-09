@@ -129,20 +129,24 @@ place s9.left < 50 > s8.right
 """
         
         let alternativeCode = """
-let width = 700
-let height = width
-let distance = 200
-let sq1 = newrect(width, height)
+def square(side) {
+    return newrect(side, side)
+}
+def new() {
+    return square(150)
+}
+let distance = 50
+let sq1 = new()
 place sq1.left.top < 200 > canvas.left
-let sq2 = newrect(width, height)
+let sq2 = new()
 place sq2.left < distance > sq1.right
-let sq3 = newrect(width, height)
+let sq3 = new()
 place sq3.bottom < distance > sq2.top
-let sq4 = newrect(width, height)
+let sq4 = new()
 place sq4.right < distance > sq3.left
 """
         
-        let program = Corbusier(multiline: code, context: corbusier)
+        let program = Corbusier(multiline: alternativeCode, context: corbusier)
         try program.run()
         
         var alpha = 1.0 as CGFloat
