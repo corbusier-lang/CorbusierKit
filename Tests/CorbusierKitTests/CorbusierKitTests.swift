@@ -114,6 +114,7 @@ place area5.top.left < 50 > bottom.left
             crbname("s7"): squares[6],
             crbname("s8"): squares[7],
             crbname("s9"): squares[8],
+            crbname("true"): CRBBoolInstance(true),
         ]
         
         let code = """
@@ -133,7 +134,12 @@ def square(side) {
     return newrect(side, side)
 }
 def new() {
-    return square(150)
+    if true {
+        let sq = 150
+    } else {
+        let sq = 50
+    }
+    return square(sq)
 }
 let distance = 50
 let sq1 = new()
