@@ -151,7 +151,7 @@ let sq4 = new()
 place sq4.right < distance > sq3.left
 """
         
-        let program = Corbusier(multiline: alternativeCode, context: corbusier)
+        let program = Corbusier(multiline: code, context: corbusier)
         try program.run()
         
         var alpha = 1.0 as CGFloat
