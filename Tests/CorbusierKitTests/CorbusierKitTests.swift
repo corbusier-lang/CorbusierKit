@@ -47,8 +47,8 @@ class CorbusierKitTests: XCTestCase {
         
         let objcts = [area1, area2, area3, area4, area5]
         
-        var corbusier = CRBContext()
-        corbusier.currentScope.instances = [
+        var corbusierContext = CRBContext()
+        corbusierContext.currentScope.instances = [
             crbname("canvas") : cgcrbcontext,
             crbname("area1") : area1,
             crbname("area2") : area2,
@@ -67,11 +67,10 @@ let bottom = area3.bottom
 place area4.top.right < 50 > bottom.right
 place area5.top.left < 50 > bottom.left
 """
-        print(code)
-        let program = Corbusier(multiline: code, context: corbusier)
-        try program.run()
         
-        for rect in objcts.flatMap({ try? $0.placed() as! Rect }) {
+        try corbusier(context: corbusierContext, code: code)
+        
+        for rect in objcts.compactMap({ try? $0.placed() as! Rect }) {
             context.fill(rect.rect)
         }
         
@@ -101,8 +100,8 @@ place area5.top.left < 50 > bottom.left
             return area
         }
         
-        var corbusier = CRBContext()
-        corbusier.currentScope.instances = [
+        var corbusierContext = CRBContext()
+        corbusierContext.currentScope.instances = [
             crbname("canvas"): cgcrbcontext,
             crbname("newrect"): create,
             crbname("s1"): squares[0],
@@ -129,30 +128,29 @@ place s8.left.bottom < 50 > s7.right.bottom
 place s9.left < 50 > s8.right
 """
         
-        let alternativeCode = """
-def square(side) {
-    return newrect(side, side)
-}
-def new() {
-    if true {
-        return square(150)
-    } else {
-        return square(50)
-    }
-}
-let distance = 50
-let sq1 = new()
-place sq1.left.top < 200 > canvas.left
-let sq2 = new()
-place sq2.left < distance > sq1.right
-let sq3 = new()
-place sq3.bottom < distance > sq2.top
-let sq4 = new()
-place sq4.right < distance > sq3.left
-"""
+//        let alternativeCode = """
+//def square(side) {
+//    return newrect(side, side)
+//}
+//def new() {
+//    if true {
+//        return square(150)
+//    } else {
+//        return square(50)
+//    }
+//}
+//let distance = 20
+//let sq1 = new()
+//place sq1.left.top < 200 > canvas.left
+//let sq2 = new()
+//place sq2.left < distance > sq1.right
+//let sq3 = new()
+//place sq3.bottom < distance > sq2.top
+//let sq4 = new()
+//place sq4.right < distance > sq3.left
+//"""
         
-        let program = Corbusier(multiline: code, context: corbusier)
-        try program.run()
+        try corbusier(context: corbusierContext, code: code)
         
         var alpha = 1.0 as CGFloat
         for rect in recorded {
@@ -164,6 +162,66 @@ place sq4.right < distance > sq3.left
         
         saveImage(from: context, imageName: "VISUALCRB")
 
+    }
+    
+    func testVisualCA() throws {
+        let cacontext: CACRBContext = {
+            let layer = CALayer()
+            layer.frame = CGRect(x: 0, y: 0, width: 500, height: 500)
+            layer.backgroundColor = CGColor.black
+            let canvas = CACRBCanvas(layer: layer)
+            return CACRBContext(canvas: canvas)
+        }()
+        let context = cacontext.canvas.layer
+        
+        var alpha = 1.0 as CGFloat
+
+        let create = CRBExternalFunctionInstance.init { (instances) -> CRBInstance in
+            let width = instances[0] as! CRBNumberInstance
+            let height = instances[0] as! CRBNumberInstance
+            let layer = CALayer()
+            
+            let color = NSColor.white.withAlphaComponent(alpha).cgColor
+            alpha -= 0.15
+            layer.backgroundColor = color
+            
+            layer.frame = CGRect(origin: .zero, size: CGSize.init(width: width.value, height: height.value))
+            context.addSublayer(layer)
+            return layer
+        }
+        
+        var corbusierContext = CRBContext()
+        corbusierContext.currentScope.instances = [
+            crbname("canvas"): cacontext,
+            crbname("newrect"): create,
+            crbname("true"): CRBBoolInstance(true),
+        ]
+        
+        let alternativeCode = """
+def square(side) {
+    return newrect(side, side)
+}
+def new() {
+    return square(150)
+}
+let sq1 = new()
+place sq1.left.top < 200 > canvas.left
+let distance = 50
+let sq2 = new()
+place sq2.left < distance > sq1.right
+let sq3 = new()
+place sq3.bottom < distance > sq2.top
+let sq4 = new()
+place sq4.right < distance > sq3.left
+"""
+        
+        try corbusier(context: corbusierContext, code: alternativeCode)
+        
+        let cg = makeContext(width: 800, height: 500).context
+        context.render(in: cg)
+        
+        saveImage(from: cg, imageName: "VISUALCRB_QUARTZ")
+        
     }
 
     static var allTests = [

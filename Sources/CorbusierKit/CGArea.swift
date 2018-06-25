@@ -41,16 +41,7 @@ struct CGSizeSide : CRBAnchorEnvironment {
 }
 
 class CGArea : CRBObject {
-    
-    fileprivate enum Anchors : String {
-        case top
-        case bottom
-    }
-    
-    fileprivate enum PlaceAnchor : String {
-        case topLeft
-    }
-    
+        
     var state: CRBObjectState
     fileprivate let size: CGSize
     

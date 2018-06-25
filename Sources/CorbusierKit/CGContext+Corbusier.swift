@@ -12,7 +12,7 @@ public final class CGCRBContext : CRBObject {
     
     public let context: CGContext
     
-    init(context: CGContext) {
+    public init(context: CGContext) {
         self.context = context
     }
     
