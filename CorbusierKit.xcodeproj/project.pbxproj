@@ -1,0 +1,983 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"CorbusierKit::CorbusierKitPackageTests::ProductTarget" /* CorbusierKitPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_76 /* Build configuration list for PBXAggregateTarget "CorbusierKitPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_79 /* PBXTargetDependency */,
+			);
+			name = CorbusierKitPackageTests;
+			productName = CorbusierKitPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		7CEA0E4720DE580200A6F425 /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEA0E4620DE580200A6F425 /* Composer.swift */; };
+		OBJ_100 /* stdlib.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* stdlib.swift */; };
+		OBJ_102 /* CoreCorbusier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CoreCorbusier::CoreCorbusier::Product" /* CoreCorbusier.framework */; };
+		OBJ_109 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Package.swift */; };
+		OBJ_114 /* CRBContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* CRBContext.swift */; };
+		OBJ_115 /* CRBExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* CRBExpression.swift */; };
+		OBJ_116 /* CRBExpressionEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* CRBExpressionEvaluator.swift */; };
+		OBJ_117 /* CRBFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* CRBFunction.swift */; };
+		OBJ_118 /* CRBInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* CRBInstance.swift */; };
+		OBJ_119 /* CRBPlacementGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* CRBPlacementGuide.swift */; };
+		OBJ_120 /* CRBStatement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* CRBStatement.swift */; };
+		OBJ_121 /* CRBStatementExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* CRBStatementExecutor.swift */; };
+		OBJ_122 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Numbers.swift */; };
+		OBJ_123 /* Primitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Primitives.swift */; };
+		OBJ_124 /* CRBAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* CRBAnchor.swift */; };
+		OBJ_125 /* CRBAngle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* CRBAngle.swift */; };
+		OBJ_126 /* CRBFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* CRBFloat.swift */; };
+		OBJ_127 /* CRBObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* CRBObject.swift */; };
+		OBJ_128 /* CRBPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* CRBPoint.swift */; };
+		OBJ_129 /* CRBSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* CRBSize.swift */; };
+		OBJ_130 /* CRBVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* CRBVector.swift */; };
+		OBJ_131 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Name.swift */; };
+		OBJ_138 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Package.swift */; };
+		OBJ_58 /* CALayer+Corbusier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* CALayer+Corbusier.swift */; };
+		OBJ_59 /* CGArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CGArea.swift */; };
+		OBJ_60 /* CGContext+Corbusier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CGContext+Corbusier.swift */; };
+		OBJ_61 /* CorbusierKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CorbusierKit.swift */; };
+		OBJ_63 /* CorbusierLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CorbusierLang::CorbusierLang::Product" /* CorbusierLang.framework */; };
+		OBJ_64 /* CoreCorbusier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CoreCorbusier::CoreCorbusier::Product" /* CoreCorbusier.framework */; };
+		OBJ_74 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_85 /* CorbusierKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* CorbusierKitTests.swift */; };
+		OBJ_87 /* CorbusierKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CorbusierKit::CorbusierKit::Product" /* CorbusierKit.framework */; };
+		OBJ_88 /* CorbusierLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CorbusierLang::CorbusierLang::Product" /* CorbusierLang.framework */; };
+		OBJ_89 /* CoreCorbusier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CoreCorbusier::CoreCorbusier::Product" /* CoreCorbusier.framework */; };
+		OBJ_97 /* CorbusierLang.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* CorbusierLang.swift */; };
+		OBJ_98 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Lexer.swift */; };
+		OBJ_99 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Parser.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C9D6EC820D6980A002C0549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CorbusierLang::CorbusierLang";
+			remoteInfo = CorbusierLang;
+		};
+		7C9D6EC920D6980A002C0549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CoreCorbusier::CoreCorbusier";
+			remoteInfo = CoreCorbusier;
+		};
+		7C9D6ECA20D6980A002C0549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CoreCorbusier::CoreCorbusier";
+			remoteInfo = CoreCorbusier;
+		};
+		7C9D6ECB20D6980A002C0549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CorbusierKit::CorbusierKit";
+			remoteInfo = CorbusierKit;
+		};
+		7C9D6ECC20D6980A002C0549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CorbusierLang::CorbusierLang";
+			remoteInfo = CorbusierLang;
+		};
+		7C9D6ECD20D6980A002C0549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CoreCorbusier::CoreCorbusier";
+			remoteInfo = CoreCorbusier;
+		};
+		7C9D6ECE20D6980C002C0549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CorbusierKit::CorbusierKitTests";
+			remoteInfo = CorbusierKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7CEA0E4620DE580200A6F425 /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
+		"CorbusierKit::CorbusierKit::Product" /* CorbusierKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CorbusierKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CorbusierKit::CorbusierKitTests::Product" /* CorbusierKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CorbusierKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CorbusierLang::CorbusierLang::Product" /* CorbusierLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CorbusierLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CoreCorbusier::CoreCorbusier::Product" /* CoreCorbusier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreCorbusier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* CGArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGArea.swift; sourceTree = "<group>"; };
+		OBJ_11 /* CGContext+Corbusier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGContext+Corbusier.swift"; sourceTree = "<group>"; };
+		OBJ_12 /* CorbusierKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorbusierKit.swift; sourceTree = "<group>"; };
+		OBJ_15 /* CorbusierKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorbusierKitTests.swift; sourceTree = "<group>"; };
+		OBJ_19 /* CorbusierLang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorbusierLang.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Lexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
+		OBJ_21 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		OBJ_22 /* stdlib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stdlib.swift; sourceTree = "<group>"; };
+		OBJ_23 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/oleg/Development/Corbusier/CorbusierKit/.build/checkouts/CorbusierLang.git-6620962976640233130/Package.swift"; sourceTree = "<group>"; };
+		OBJ_26 /* CRBContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBContext.swift; sourceTree = "<group>"; };
+		OBJ_27 /* CRBExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBExpression.swift; sourceTree = "<group>"; };
+		OBJ_28 /* CRBExpressionEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBExpressionEvaluator.swift; sourceTree = "<group>"; };
+		OBJ_29 /* CRBFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBFunction.swift; sourceTree = "<group>"; };
+		OBJ_30 /* CRBInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBInstance.swift; sourceTree = "<group>"; };
+		OBJ_31 /* CRBPlacementGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBPlacementGuide.swift; sourceTree = "<group>"; };
+		OBJ_32 /* CRBStatement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBStatement.swift; sourceTree = "<group>"; };
+		OBJ_33 /* CRBStatementExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBStatementExecutor.swift; sourceTree = "<group>"; };
+		OBJ_35 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Primitives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitives.swift; sourceTree = "<group>"; };
+		OBJ_38 /* CRBAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBAnchor.swift; sourceTree = "<group>"; };
+		OBJ_39 /* CRBAngle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBAngle.swift; sourceTree = "<group>"; };
+		OBJ_40 /* CRBFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBFloat.swift; sourceTree = "<group>"; };
+		OBJ_41 /* CRBObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBObject.swift; sourceTree = "<group>"; };
+		OBJ_42 /* CRBPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBPoint.swift; sourceTree = "<group>"; };
+		OBJ_43 /* CRBSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBSize.swift; sourceTree = "<group>"; };
+		OBJ_44 /* CRBVector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRBVector.swift; sourceTree = "<group>"; };
+		OBJ_45 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/oleg/Development/Corbusier/CorbusierKit/.build/checkouts/CoreCorbusier.git--7226686616000655181/Package.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* CALayer+Corbusier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Corbusier.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_101 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_102 /* CoreCorbusier.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_63 /* CorbusierLang.framework in Frameworks */,
+				OBJ_64 /* CoreCorbusier.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_87 /* CorbusierKit.framework in Frameworks */,
+				OBJ_88 /* CorbusierLang.framework in Frameworks */,
+				OBJ_89 /* CoreCorbusier.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_13 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* CorbusierKitTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_14 /* CorbusierKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* CorbusierKitTests.swift */,
+			);
+			name = CorbusierKitTests;
+			path = Tests/CorbusierKitTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_16 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* CorbusierLang */,
+				OBJ_24 /* CoreCorbusier */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_17 /* CorbusierLang */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* CorbusierLang */,
+				OBJ_23 /* Package.swift */,
+			);
+			name = CorbusierLang;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_18 /* CorbusierLang */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* CorbusierLang.swift */,
+				OBJ_20 /* Lexer.swift */,
+				OBJ_21 /* Parser.swift */,
+				OBJ_22 /* stdlib.swift */,
+			);
+			name = CorbusierLang;
+			path = ".build/checkouts/CorbusierLang.git-6620962976640233130/Sources/CorbusierLang";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_24 /* CoreCorbusier */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* CoreCorbusier */,
+				OBJ_46 /* Jane */,
+				OBJ_47 /* Package.swift */,
+			);
+			name = CoreCorbusier;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_25 /* CoreCorbusier */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* CRBContext.swift */,
+				OBJ_27 /* CRBExpression.swift */,
+				OBJ_28 /* CRBExpressionEvaluator.swift */,
+				OBJ_29 /* CRBFunction.swift */,
+				OBJ_30 /* CRBInstance.swift */,
+				OBJ_31 /* CRBPlacementGuide.swift */,
+				OBJ_32 /* CRBStatement.swift */,
+				OBJ_33 /* CRBStatementExecutor.swift */,
+				OBJ_34 /* ExtLib */,
+				OBJ_36 /* Primitives.swift */,
+				OBJ_37 /* Primitives */,
+			);
+			name = CoreCorbusier;
+			path = ".build/checkouts/CoreCorbusier.git--7226686616000655181/Sources/CoreCorbusier";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_34 /* ExtLib */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_35 /* Numbers.swift */,
+			);
+			path = ExtLib;
+			sourceTree = "<group>";
+		};
+		OBJ_37 /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_38 /* CRBAnchor.swift */,
+				OBJ_39 /* CRBAngle.swift */,
+				OBJ_40 /* CRBFloat.swift */,
+				OBJ_41 /* CRBObject.swift */,
+				OBJ_42 /* CRBPoint.swift */,
+				OBJ_43 /* CRBSize.swift */,
+				OBJ_44 /* CRBVector.swift */,
+				OBJ_45 /* Name.swift */,
+			);
+			path = Primitives;
+			sourceTree = "<group>";
+		};
+		OBJ_46 /* Jane */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Jane;
+			path = ".build/checkouts/CoreCorbusier.git--7226686616000655181/Sources/Jane";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"CorbusierKit::CorbusierKit::Product" /* CorbusierKit.framework */,
+				"CoreCorbusier::CoreCorbusier::Product" /* CoreCorbusier.framework */,
+				"CorbusierLang::CorbusierLang::Product" /* CorbusierLang.framework */,
+				"CorbusierKit::CorbusierKitTests::Product" /* CorbusierKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_13 /* Tests */,
+				OBJ_16 /* Dependencies */,
+				OBJ_48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* CorbusierKit */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* CorbusierKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* CALayer+Corbusier.swift */,
+				OBJ_10 /* CGArea.swift */,
+				OBJ_11 /* CGContext+Corbusier.swift */,
+				OBJ_12 /* CorbusierKit.swift */,
+				7CEA0E4620DE580200A6F425 /* Composer.swift */,
+			);
+			name = CorbusierKit;
+			path = Sources/CorbusierKit;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"CorbusierKit::CorbusierKit" /* CorbusierKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_54 /* Build configuration list for PBXNativeTarget "CorbusierKit" */;
+			buildPhases = (
+				OBJ_57 /* Sources */,
+				OBJ_62 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_65 /* PBXTargetDependency */,
+				OBJ_67 /* PBXTargetDependency */,
+			);
+			name = CorbusierKit;
+			productName = CorbusierKit;
+			productReference = "CorbusierKit::CorbusierKit::Product" /* CorbusierKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CorbusierKit::CorbusierKitTests" /* CorbusierKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_81 /* Build configuration list for PBXNativeTarget "CorbusierKitTests" */;
+			buildPhases = (
+				OBJ_84 /* Sources */,
+				OBJ_86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_90 /* PBXTargetDependency */,
+				OBJ_91 /* PBXTargetDependency */,
+				OBJ_92 /* PBXTargetDependency */,
+			);
+			name = CorbusierKitTests;
+			productName = CorbusierKitTests;
+			productReference = "CorbusierKit::CorbusierKitTests::Product" /* CorbusierKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"CorbusierKit::SwiftPMPackageDescription" /* CorbusierKitPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_70 /* Build configuration list for PBXNativeTarget "CorbusierKitPackageDescription" */;
+			buildPhases = (
+				OBJ_73 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CorbusierKitPackageDescription;
+			productName = CorbusierKitPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"CorbusierLang::CorbusierLang" /* CorbusierLang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_93 /* Build configuration list for PBXNativeTarget "CorbusierLang" */;
+			buildPhases = (
+				OBJ_96 /* Sources */,
+				OBJ_101 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_103 /* PBXTargetDependency */,
+			);
+			name = CorbusierLang;
+			productName = CorbusierLang;
+			productReference = "CorbusierLang::CorbusierLang::Product" /* CorbusierLang.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CorbusierLang::SwiftPMPackageDescription" /* CorbusierLangPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_105 /* Build configuration list for PBXNativeTarget "CorbusierLangPackageDescription" */;
+			buildPhases = (
+				OBJ_108 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CorbusierLangPackageDescription;
+			productName = CorbusierLangPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"CoreCorbusier::CoreCorbusier" /* CoreCorbusier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_110 /* Build configuration list for PBXNativeTarget "CoreCorbusier" */;
+			buildPhases = (
+				OBJ_113 /* Sources */,
+				OBJ_132 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreCorbusier;
+			productName = CoreCorbusier;
+			productReference = "CoreCorbusier::CoreCorbusier::Product" /* CoreCorbusier.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CoreCorbusier::SwiftPMPackageDescription" /* CoreCorbusierPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_134 /* Build configuration list for PBXNativeTarget "CoreCorbusierPackageDescription" */;
+			buildPhases = (
+				OBJ_137 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreCorbusierPackageDescription;
+			productName = CoreCorbusierPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "CorbusierKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"CorbusierKit::CorbusierKit" /* CorbusierKit */,
+				"CorbusierKit::SwiftPMPackageDescription" /* CorbusierKitPackageDescription */,
+				"CorbusierKit::CorbusierKitPackageTests::ProductTarget" /* CorbusierKitPackageTests */,
+				"CorbusierKit::CorbusierKitTests" /* CorbusierKitTests */,
+				"CorbusierLang::CorbusierLang" /* CorbusierLang */,
+				"CorbusierLang::SwiftPMPackageDescription" /* CorbusierLangPackageDescription */,
+				"CoreCorbusier::CoreCorbusier" /* CoreCorbusier */,
+				"CoreCorbusier::SwiftPMPackageDescription" /* CoreCorbusierPackageDescription */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_108 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_109 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_113 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_114 /* CRBContext.swift in Sources */,
+				OBJ_115 /* CRBExpression.swift in Sources */,
+				OBJ_116 /* CRBExpressionEvaluator.swift in Sources */,
+				OBJ_117 /* CRBFunction.swift in Sources */,
+				OBJ_118 /* CRBInstance.swift in Sources */,
+				OBJ_119 /* CRBPlacementGuide.swift in Sources */,
+				OBJ_120 /* CRBStatement.swift in Sources */,
+				OBJ_121 /* CRBStatementExecutor.swift in Sources */,
+				OBJ_122 /* Numbers.swift in Sources */,
+				OBJ_123 /* Primitives.swift in Sources */,
+				OBJ_124 /* CRBAnchor.swift in Sources */,
+				OBJ_125 /* CRBAngle.swift in Sources */,
+				OBJ_126 /* CRBFloat.swift in Sources */,
+				OBJ_127 /* CRBObject.swift in Sources */,
+				OBJ_128 /* CRBPoint.swift in Sources */,
+				OBJ_129 /* CRBSize.swift in Sources */,
+				OBJ_130 /* CRBVector.swift in Sources */,
+				OBJ_131 /* Name.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_137 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_138 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				7CEA0E4720DE580200A6F425 /* Composer.swift in Sources */,
+				OBJ_58 /* CALayer+Corbusier.swift in Sources */,
+				OBJ_59 /* CGArea.swift in Sources */,
+				OBJ_60 /* CGContext+Corbusier.swift in Sources */,
+				OBJ_61 /* CorbusierKit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_74 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_85 /* CorbusierKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_97 /* CorbusierLang.swift in Sources */,
+				OBJ_98 /* Lexer.swift in Sources */,
+				OBJ_99 /* Parser.swift in Sources */,
+				OBJ_100 /* stdlib.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_103 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CoreCorbusier::CoreCorbusier" /* CoreCorbusier */;
+			targetProxy = 7C9D6EC920D6980A002C0549 /* PBXContainerItemProxy */;
+		};
+		OBJ_65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CorbusierLang::CorbusierLang" /* CorbusierLang */;
+			targetProxy = 7C9D6EC820D6980A002C0549 /* PBXContainerItemProxy */;
+		};
+		OBJ_67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CoreCorbusier::CoreCorbusier" /* CoreCorbusier */;
+			targetProxy = 7C9D6ECA20D6980A002C0549 /* PBXContainerItemProxy */;
+		};
+		OBJ_79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CorbusierKit::CorbusierKitTests" /* CorbusierKitTests */;
+			targetProxy = 7C9D6ECE20D6980C002C0549 /* PBXContainerItemProxy */;
+		};
+		OBJ_90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CorbusierKit::CorbusierKit" /* CorbusierKit */;
+			targetProxy = 7C9D6ECB20D6980A002C0549 /* PBXContainerItemProxy */;
+		};
+		OBJ_91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CorbusierLang::CorbusierLang" /* CorbusierLang */;
+			targetProxy = 7C9D6ECC20D6980A002C0549 /* PBXContainerItemProxy */;
+		};
+		OBJ_92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CoreCorbusier::CoreCorbusier" /* CoreCorbusier */;
+			targetProxy = 7C9D6ECD20D6980A002C0549 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_107 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CorbusierKit.xcodeproj/CoreCorbusier_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CoreCorbusier;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CoreCorbusier;
+			};
+			name = Debug;
+		};
+		OBJ_112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CorbusierKit.xcodeproj/CoreCorbusier_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CoreCorbusier;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CoreCorbusier;
+			};
+			name = Release;
+		};
+		OBJ_135 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CorbusierKit.xcodeproj/CorbusierKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CorbusierKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CorbusierKit;
+			};
+			name = Debug;
+		};
+		OBJ_56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CorbusierKit.xcodeproj/CorbusierKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CorbusierKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CorbusierKit;
+			};
+			name = Release;
+		};
+		OBJ_71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CorbusierKit.xcodeproj/CorbusierKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CorbusierKitTests;
+			};
+			name = Debug;
+		};
+		OBJ_83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CorbusierKit.xcodeproj/CorbusierKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CorbusierKitTests;
+			};
+			name = Release;
+		};
+		OBJ_94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CorbusierKit.xcodeproj/CorbusierLang_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CorbusierLang;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CorbusierLang;
+			};
+			name = Debug;
+		};
+		OBJ_95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CorbusierKit.xcodeproj/CorbusierLang_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CorbusierLang;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CorbusierLang;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_105 /* Build configuration list for PBXNativeTarget "CorbusierLangPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_106 /* Debug */,
+				OBJ_107 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_110 /* Build configuration list for PBXNativeTarget "CoreCorbusier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_111 /* Debug */,
+				OBJ_112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_134 /* Build configuration list for PBXNativeTarget "CoreCorbusierPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_135 /* Debug */,
+				OBJ_136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "CorbusierKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_54 /* Build configuration list for PBXNativeTarget "CorbusierKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_55 /* Debug */,
+				OBJ_56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_70 /* Build configuration list for PBXNativeTarget "CorbusierKitPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_71 /* Debug */,
+				OBJ_72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_76 /* Build configuration list for PBXAggregateTarget "CorbusierKitPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_77 /* Debug */,
+				OBJ_78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_81 /* Build configuration list for PBXNativeTarget "CorbusierKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_82 /* Debug */,
+				OBJ_83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_93 /* Build configuration list for PBXNativeTarget "CorbusierLang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_94 /* Debug */,
+				OBJ_95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
